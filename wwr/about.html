@@ -10,40 +10,40 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@100;900&display=swap" rel="stylesheet">
-    
-    <!-- Link to CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
-
-    <!-- HEADER -->
     <header>
-        <img src="images/white-water-logo.png" alt="Rafting Company Logo">
+        <img src="images/white-water-logo.png" alt="Rafting Company Logo" class="logo">
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
+            <a href="about.html" class="active">About Us</a>
             <a href="trips.html">Trips</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <div class="hero">
-        <h1>WHITE WATER RAFTING</h1>
-        <p class="hero-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam inventore quas ratione at nostrum recusandae voluptatum ducimus molestiae consequuntur amet?</p>
-        <img src="images/happy-client.jpg" alt="Happy Client" class="hero-image">
-    </div>
-
-    <!-- MAIN CONTENT -->
     <main>
+        <div class="hero">
+            <img src="images/hero.jpg" alt="Rafting Adventure" class="hero-background">
+            <h1>WHITE WATER RAFTING</h1>
+            <article>
+                <h3>OUR MISSION</h3> <!-- Added heading to fix warning -->
+                <img src="images/happy-client.jpg" alt="Happy Client">
+                <p>Experience the thrill of adventure and the beauty of nature with our expert-led rafting trips.</p>
+            </article>
+        </div>
+
         <section class="history">
             <h2>HISTORY</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint est odit aperiam dicta cum accusamus consequuntur nihil libero expedita exercitationem!</p>
+            <p>Founded with a passion for adventure, White Water Rafting has been delivering unforgettable experiences for thrill-seekers and nature lovers alike.</p>
         </section>
 
         <section class="adventure">
-            <h2>ADVENTURE AWAITS YOU</h2>
+            <h2>ADVENTURE AWAITS YOU!</h2>
             <div class="image-gallery">
                 <img src="images/rafting1.jpg" alt="Rafting Adventure">
                 <img src="images/rafting2.jpg" alt="Rafting Adventure">
@@ -54,7 +54,6 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2025 White Water Rafting | Designed by Samuel Emeka Innocent</p>
         <div class="social-icons">
@@ -63,6 +62,5 @@
             <a href="#"><img src="images/instagram-icon.webp" alt="Instagram"></a>
         </div>
     </footer>
-
 </body>
 </html>

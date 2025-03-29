@@ -1,121 +1,160 @@
 /* Root Variables */
 :root {
-    --primary-color: #1485F5;   
-    --secondary-color: #7DAACA; 
-    --background-color: #EBF2FA; 
-    --accent-color: #D7E9C3;    
-    --text-color: #333333; 
+    --primary-color: #1485f5;
+    --secondary-color: #7daaca;
+    --accent1-color: #ebf2fa;
+    --accent2-color: #d7e9c3;
+    --text-color: #333333;
+    --white: #ffffff;
+    --black: #000000;
 }
 
-/* General Styling */
+/* Base Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
     color: var(--text-color);
+    background-color: var(--accent1-color);
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
-/* Header Styling */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
-    padding: 10px 20px;
+    padding: 15px 20px;
+    color: var(--white);
+}
+
+.logo {
+    width: 100px;
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     font-weight: bold;
+}
+
+nav a.active {
+    border-bottom: 2px solid var(--white);
 }
 
 /* Hero Section */
 .hero {
     position: relative;
-    text-align: center;
-    background-image: url('../images/hero.jpg'); /* Ensure correct path */
-    background-size: cover;
-    background-position: center;
     height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    color: white;
+    overflow: hidden;
+    background-color: var(--black);
+}
+
+.hero-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    font-family: 'Lora', serif;
-    margin-bottom: 10px;
-}
-
-.hero-text {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 15px;
-    border-radius: 8px;
-    max-width: 60%;
-    font-size: 1rem;
-}
-
-.hero-image {
     position: absolute;
-    right: 20px;
-    bottom: 20px;
-    width: 200px;
-    border-radius: 10px;
+    top: 20px;
+    left: 20px;
+    font-family: 'Lora', serif;
+    color: var(--white);
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Section Styling */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 300px;
+    color: var(--white);
+}
+
+.hero article h3 {
+    font-family: 'Lora', serif;
+    margin-top: 0;
+    color: var(--white);
+}
+
+.hero article img {
+    float: right;
+    margin-left: 10px;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.hero article p {
+    margin: 0;
+}
+
+/* Sections */
+.history, .adventure {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
 h2 {
     font-family: 'Lora', serif;
     color: var(--primary-color);
-    text-align: center;
-}
-
-/* History and Adventure Sections */
-.history,
-.adventure {
-    padding: 20px;
-    text-align: center;
 }
 
 /* Image Gallery */
 .image-gallery {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+    margin-top: 15px;
 }
 
 .image-gallery img {
     width: 18%;
-    border-radius: 8px;
+    min-width: 150px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
-/* Footer Styling */
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
 footer {
-    text-align: center;
     background-color: var(--secondary-color);
+    text-align: center;
     padding: 15px;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 10px 0;
+    color: var(--text-color);
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
 }
 
 .social-icons img {
     width: 30px;
     height: 30px;
+    /* Remove filter and use colored icons instead */
+    background-color: transparent;
 }
