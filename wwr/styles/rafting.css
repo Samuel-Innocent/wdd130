@@ -1,22 +1,18 @@
-/* Root Variables */
+/* Root Variables (From Your Site Plan) */
 :root {
     --primary-color: #1485f5;
     --secondary-color: #7daaca;
     --accent1-color: #ebf2fa;
     --accent2-color: #d7e9c3;
     --text-color: #333333;
-    --white: #ffffff;
-    --black: #000000;
 }
 
 /* Base Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--text-color);
-    background-color: var(--accent1-color);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    color: var(--text-color);
 }
 
 /* Header */
@@ -26,7 +22,6 @@ header {
     align-items: center;
     background-color: var(--primary-color);
     padding: 15px 20px;
-    color: var(--white);
 }
 
 .logo {
@@ -34,29 +29,27 @@ header {
 }
 
 nav a {
-    color: var(--white);
+    color: white;
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
 }
 
 nav a.active {
-    border-bottom: 2px solid var(--white);
+    border-bottom: 2px solid white;
 }
 
-/* Hero Section */
+/* Hero Section (Critical Fixes) */
 .hero {
     position: relative;
     height: 400px;
     overflow: hidden;
-    background-color: var(--black);
 }
 
 .hero-background {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8;
 }
 
 .hero h1 {
@@ -64,10 +57,9 @@ nav a.active {
     top: 20px;
     left: 20px;
     font-family: 'Lora', serif;
-    color: var(--white);
+    color: white;
     font-size: 2.5rem;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero article {
@@ -78,13 +70,14 @@ nav a.active {
     padding: 15px;
     border-radius: 8px;
     max-width: 300px;
-    color: var(--white);
 }
 
 .hero article h3 {
+    color: white;
     font-family: 'Lora', serif;
-    margin-top: 0;
-    color: var(--white);
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .hero article img {
@@ -95,6 +88,7 @@ nav a.active {
 }
 
 .hero article p {
+    color: white;
     margin: 0;
 }
 
@@ -104,8 +98,6 @@ nav a.active {
     max-width: 800px;
     margin: 20px auto;
     text-align: center;
-    background-color: var(--white);
-    color: var(--text-color);
 }
 
 h2 {
@@ -124,13 +116,7 @@ h2 {
 
 .image-gallery img {
     width: 18%;
-    min-width: 150px;
     border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.image-gallery img:hover {
-    transform: scale(1.05);
 }
 
 /* Footer */
@@ -138,7 +124,6 @@ footer {
     background-color: var(--secondary-color);
     text-align: center;
     padding: 15px;
-    color: var(--text-color);
 }
 
 .social-icons {
@@ -155,6 +140,4 @@ footer {
 .social-icons img {
     width: 30px;
     height: 30px;
-    /* Remove filter and use colored icons instead */
-    background-color: transparent;
 }
