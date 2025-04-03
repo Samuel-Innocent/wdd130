@@ -207,6 +207,170 @@ footer {
     transform: scale(1.2);
 }
 
+/* Contact Page Specific Styles */
+.contact-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 40px;
+}
+
+.company-info {
+    background-color: var(--accent1-color);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.company-info h2,
+.employee-profiles h2,
+.contact-form h2 {
+    font-family: 'Lora', serif;
+    color: var(--primary-color);
+    margin-top: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+.contact-details strong {
+    color: var(--primary-color);
+}
+
+.map-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 8px;
+    border: none;
+}
+
+.employee-profiles {
+    text-align: center;
+}
+
+.employees {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.employees figure {
+    margin: 0;
+    max-width: 250px;
+}
+
+.employees img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.employees img:hover {
+    transform: scale(1.05);
+}
+
+.employees figcaption {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.4;
+}
+
+.contact-form {
+    background-color: var(--accent1-color);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-options input[type="radio"] {
+    margin: 0;
+    width: auto;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 30px auto 0;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #0a6ec5;
+}
+
 @media (max-width: 768px) {
     header {
         grid-template-columns: auto 1fr;
@@ -250,10 +414,42 @@ footer {
     .social-links {
         justify-content: center;
     }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .employees {
+        gap: 20px;
+    }
+    
+    .employees img {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 @media (max-width: 480px) {
     .adventures-gallery figure {
         min-width: 100%;
+    }
+    
+    /* Contact page responsive */
+    .company-info,
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .employees {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .employees figure {
+        max-width: 100%;
+    }
+    
+    .map-container iframe {
+        height: 300px;
     }
 }
